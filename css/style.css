@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.logo{
+    position: absolute;
+    
+}
+.hero{
+    background: #4A403A;
+    min-height: 100vh;
+    width: 100%;
+    color: #fff;
+    position: relative;
+}
+
+.navegacion{
+    display: flex;
+    align-items: center;
+    padding: 20px 8%;
+
+}
+
+.navegacion .logo{
+    width: 200px;
+    cursor: pointer;
+}
+
+.navegacion ul{
+    flex: 1;
+    text-align: right;
+}
+
+.navegacion ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+}
+
+.navegacion ul li a{
+    text-decoration: none;
+    color: #FFC069;
+}
+
+.boton{
+    background: #efefef ;
+    height: 30px;
+    width: 60px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+.boton span{
+    display: block;
+    background: #999;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    margin-left: 2px;
+    transition: background 0.5s, margin-left 0.5s;
+}
+
+.lamp-container{
+    position: absolute;
+    top: -20px;
+    left: 22%;
+    width: 200px;
+}
+
+.lamp{
+    width: 100%;
+}
+
+.light{
+    position: absolute;
+    top: 97%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 550px;
+    margin-left: -10px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.text-container{
+    max-width: 600px;
+    margin-top: 7%;
+    margin-left: 50%;
+}
+
+.text-container h1{
+    font-size: 80px;
+    font-weight: 400;
+}
+
+.text-container a{
+    text-decoration: none;
+    background: #00986F;
+    padding: 14px 40px;
+    display: inline-block;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 30px;
+    border-radius: 30px;
+}
+
+.control{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 150px;
+}
+
+.control .line{
+    width: 250px;
+    height: 4px;
+    background: #FFF;
+    margin: 0 20px;
+    border-radius: 2px;
+}
+
+.control .line span{
+    width: 50%;
+    height: 8px;
+    margin-top: -2px;
+    border-radius: 4px;
+    background: #FFC069;
+    display: block;
+}
+
+.active{
+    background: green;
+}
+.active span{
+    background: #FFF;
+    margin-left: 31px;
+}
+
+.on{
+    opacity: 1;
+}
+
+/* Login de Miguel */
+body{
+    margin: 0;
+    padding: 0;
+    background: url(../img/fondo.jpg) no-repeat center top;
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100vh;
+}
+.login-box{
+    width: 320px;
+    height: 380px;
+    background: #152D35;
+    color: #FFF;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 50px 30px;
+}
+.login-box .avatar{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+
+.login-box h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.login-box label{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+}
+.login-box input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"]{
+    border: none;
+    border-bottom: 1px solid #FFF;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #FFF;
+    font-size: 16px;
+}
+.login-box input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #b80f22;
+    color: #FFF;
+    font-size: 18px;
+    border-radius: 20px;
+}
+.login-box a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgray;
+}
+.login-box a:hover{
+    color: #fff;
+
+}
