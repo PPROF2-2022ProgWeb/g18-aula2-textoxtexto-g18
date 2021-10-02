@@ -1,0 +1,9 @@
+#archivos de objeto o librerías 
+.[oa]
+
+#archivos temporales
+*~
+.pid
+
+#Datos personales
+.env
