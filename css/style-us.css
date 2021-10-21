@@ -1,0 +1,14 @@
+body {
+    font-family: Helvetica, arial, sans-serif;
+    margin: 0em;
+}
+
+.cover {
+    height: 500px;
+    background-image: url(https://i0.wp.com/www.laarena.com.ar/__uP_Load_/2021/05/biblioteca3cc965c6.jpg?resize=696%2C464);
+    color: whitesmoke;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+}
