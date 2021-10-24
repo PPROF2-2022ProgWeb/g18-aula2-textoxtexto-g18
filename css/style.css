@@ -1,6 +1,10 @@
 .navbar{
     background-color: #4A403A ;
 }
+body{
+    overflow: hidden;
+    }
+
 .logo{
     position: absolute;
     height: 10%;
@@ -330,3 +334,13 @@ body{
         box-shadow: 0 0 0 0 rgba(256, 256, 256, 0);
     }
 }
+::-webkit-scrollbar {
+    display: none;
+}
+.pie {
+    position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+    color: #FFC069}
