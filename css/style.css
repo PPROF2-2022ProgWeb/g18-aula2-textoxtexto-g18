@@ -45,7 +45,7 @@ body{
     
 }
 .navbar{
-    background-color: #4A403A !important;
+    background-color: #63564e !important;
     min-width: 100vw 100vh !important;
       
 }
@@ -56,6 +56,13 @@ color: rgb(245, 121, 32) !important;
 .btn{
     background-color: rgb(245, 121, 32);
 }
+.btn:hover{
+background-color:  #4A403A;
+color: rgb(245, 121, 32);
+}
+a:hover{
+    color: rgb(247, 181, 133) !important;
+}]
 .logo{
     height: 10%;  
 }
