@@ -1,21 +1,82 @@
-.navbar{
+
+.body-inicio{
+    background-color: #4A403A;
+    font-family: sans-serif;
+    background-size: 100vw 100vh;
+    margin: 0;
+    margin-bottom: 1px;
+}
+
+body{
     background-color: #4A403A ;
+    font-family: sans-serif;
+    background-size: 100vw 100vh;
+
+}    
+.body-gral{
+    background-color: #4A403A ;
+    font-family: sans-serif;
+    background-image: url(/img/fondo.jpg);
+    background-size: 100vw 100vh;
 }
 body{
     overflow: hidden;
     }
+#logo-inicio{
 
 .logo{
     position: absolute;
-    height: 10%;
+    margin-top: 10%;
+    padding: 1em;
+    min-block-size: 20vw;
+    margin-left: 10vh;
+    z-index: 21;
+
     
 }
+.barra-menu {
+    position: fixed;
+    top: 0;
+    right: 0;    
+    left: 0;
+    z-index: 20;
+}
+
+.navbar-collapse { 
+    text-align: center; 
+    
+}
+.navbar{
+    background-color: #4A403A !important;
+    min-width: 100vw 100vh !important;
+      
+}
+.navbar a{
+color: rgb(245, 121, 32) !important;
+}
+
+.btn{
+    background-color: rgb(245, 121, 32);
+}
+.logo{
+    height: 10%;  
+}
+.fondo{
+    background-position:absolute;
+    z-index:1; 
+    width:100%; 
+    height:100%;
+}
+    
 .hero{
+    margin-top: 10%;
+    margin-right: 5%;
     background: #4A403A;
-    min-height: 110vh;
-    width: 100%;
+    min-height: 100vh;
+    max-width: 850px;
     color: #fff;
     position: relative;
+    box-sizing: content-box;
 }
 
 .navegacion{
@@ -89,10 +150,18 @@ body{
     transition: opacity 0.5s;
 }
 
+
 .text-container{
-    max-width: 600px;
-    margin-top: 7%;
-    margin-left: 50%;
+    
+    position: relative;
+    width: 80%;
+    color: white;
+    padding-left: 2em;
+    margin-top: 8em;
+    margin-right: 2em;
+    
+    
+   
 }
 
 .text-container h1{
@@ -146,20 +215,10 @@ body{
 .on{
     opacity: 1;
 }
-
-/* Login de Miguel */
-body{
-    margin: 0;
-    padding: 0;
-    background: url(../img/fondo.jpg) no-repeat center top;
-    background-size: cover;
-    font-family: sans-serif;
-    height: 100vh;
-}
 .login-box{
     width: 320px;
     height: 380px;
-    background: #152D35;
+    background: #723c09;
     color: #FFF;
     top: 50%;
     left: 50%;
@@ -208,7 +267,7 @@ body{
     border: none;
     outline: none;
     height: 40px;
-    background: #b80f22;
+    background: #d16217;
     color: #FFF;
     font-size: 18px;
     border-radius: 20px;
@@ -228,51 +287,39 @@ body{
     padding: 0;
     box-sizing: border-box;
   }
-  
-  .logo{
-    position: absolute;
-    top: 0px;
-    left: 0px;
+ 
 
-  }
-  body {
-    background: url(../img/fondo.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-
-  .texto{
-      width: 200px;
-      margin: auto;
-      display: block;
-      top: 50px;
-      border-radius: 50px;
-  }
+.texto{
+    width: 200px;
+    margin: auto;
+    display: block;
+    top: 50px;
+    border-radius: 50px;
+}
   
-  .form-register {
+.form-register {
     align-items: center;
     width: 400px;
-    background: #24303c;
+    background: #723c09;
     padding: 30px;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 20%;
     border-radius: 4px;
     font-family: 'calibri';
     color: white;
-    box-shadow: 7px 13px 37px #000;
-  }
+    box-shadow: 7px 13px 37px rgb(85, 42, 42);
+}
 
   
-  .form-register h4 {
+.form-register h4 {
     font-size: 22px;
     margin-bottom: 20px;
-  }
+}
    
   
-  .controls {
+.controls {
     width: 100%;
-    background: #24303c;
+    background: #723c09;
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 16px;
@@ -280,14 +327,18 @@ body{
     font-family: 'calibri';
     font-size: 18px;
     color: white;
-  }
+}
   
-  .form-register p {
+.form-register p {
     height: 40px;
     text-align: center;
     font-size: 14px;
     line-height: 40px;
   }
+
+#register{
+    margin-top: 8%;
+}
 .checkbox-input{
     width: 20px;
     position: relative;
@@ -295,29 +346,37 @@ body{
     padding: 6px 8px;
     border-radius: 6px;
     justify-content: center;
-    background: rgba(0, 119, 255, 0.06);
+    background: rgba(124, 62, 20, 0.295);
 }
   
-  .form-register a {
+.form-register a {
     color: white;
     text-decoration: none;
-  }
+}
   
-  .form-register a:hover {
+.form-register a:hover {
     color: white;
     text-decoration: underline;
-  }
+}
 
-  .form-register .botons{
-    background:#1f53c5;
+.form-register .botons{
+    background:#d16217;
     color: #ffffff;
     display: inline-block;
     padding: 10px 140px;
     border-radius: 2px;
     min-width: 200px;
     text-decoration: none;
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, .1);
+    box-shadow: 0 0 0 0 rgba(109, 25, 25, 0.342);
     animation: pulse 1.5s infinite;
+}
+
+footer{
+    text-align: center ;
+    padding: 2em;
+    align-self: flex-end;
+    color: white;
+    width: 100%;
 }
 
 @keyframes pulse {
@@ -334,13 +393,21 @@ body{
         box-shadow: 0 0 0 0 rgba(256, 256, 256, 0);
     }
 }
+
+@media(max-width:480){
+    form{
+        width: 80%;
+    }
+ }
+
 ::-webkit-scrollbar {
     display: none;
 }
 .pie {
-    position: fixed;
+  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   text-align: center;
-    color: #FFC069}
+  color: #FFC069}
+
