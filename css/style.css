@@ -223,7 +223,7 @@ a:hover{
 .login-box{
     width: 320px;
     height: 380px;
-    background: #723c09;
+    background: #4A403A;
     color: #FFF;
     top: 50%;
     left: 50%;
@@ -305,7 +305,7 @@ a:hover{
 .form-register {
     align-items: center;
     width: 400px;
-    background: #723c09;
+    background: #4A403A;
     padding: 30px;
     margin: auto;
     margin-top: 20%;
@@ -324,11 +324,11 @@ a:hover{
   
 .controls {
     width: 100%;
-    background: #723c09;
+    background: #4A403A;
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 16px;
-    border: 1px solid #1f53c5;
+    border: 1px solid rgb(245, 121, 32);
     font-family: 'calibri';
     font-size: 18px;
     color: white;
@@ -351,7 +351,7 @@ a:hover{
     padding: 6px 8px;
     border-radius: 6px;
     justify-content: center;
-    background: rgba(124, 62, 20, 0.295);
+    background: #4A403A;
 }
   
 .form-register a {
@@ -366,13 +366,13 @@ a:hover{
 
 .form-register .botons{
     background:#d16217;
-    color: #ffffff;
+    color: white;
     display: inline-block;
     padding: 10px 140px;
     border-radius: 2px;
     min-width: 200px;
     text-decoration: none;
-    box-shadow: 0 0 0 0 rgba(109, 25, 25, 0.342);
+    box-shadow: 0 0 0 0 #4A403A;
     animation: pulse 1.5s infinite;
 }
 
