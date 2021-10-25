@@ -22,16 +22,7 @@ body{
 }
 
 
-#logo-inicio{
-    position: absolute;
-    margin-top: 10%;
-    padding: 1em;
-    min-block-size: 20vw;
-    margin-left: 10vh;
-    z-index: 21;
 
-   
-}
 .barra-menu {
     position: fixed;
     top: 0;
@@ -62,9 +53,18 @@ color: rgb(245, 121, 32);
 }
 a:hover{
     color: rgb(247, 181, 133) !important;
-}]
+}
 .logo{
+    
     height: 10%;  
+}
+#logo-inicio{
+    position: absolute;
+    margin-top: 18vw;
+    padding: 1em;
+    min-block-size: 20vw;
+    margin-left: 10vh;
+    z-index: 21; 
 }
 .fondo{
     background-position:absolute;
