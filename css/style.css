@@ -1,4 +1,5 @@
 
+
 .body-inicio{
     background-color: #4A403A;
     font-family: sans-serif;
@@ -19,12 +20,9 @@ body{
     background-image: url(/img/fondo.jpg);
     background-size: 100vw 100vh;
 }
-body{
-    overflow: hidden;
-    }
-#logo-inicio{
 
-.logo{
+
+#logo-inicio{
     position: absolute;
     margin-top: 10%;
     padding: 1em;
@@ -32,7 +30,7 @@ body{
     margin-left: 10vh;
     z-index: 21;
 
-    
+   
 }
 .barra-menu {
     position: fixed;
@@ -393,21 +391,8 @@ footer{
         box-shadow: 0 0 0 0 rgba(256, 256, 256, 0);
     }
 }
-
 @media(max-width:480){
     form{
         width: 80%;
     }
  }
-
-::-webkit-scrollbar {
-    display: none;
-}
-.pie {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  color: #FFC069}
-
