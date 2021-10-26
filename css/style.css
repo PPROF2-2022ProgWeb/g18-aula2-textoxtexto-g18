@@ -98,7 +98,8 @@ a:hover{
 
 .navegacion ul{
     flex: 1;
-    text-align: right;
+    text-align: left;
+    
 }
 
 .navegacion ul li{
