@@ -1,0 +1,418 @@
+
+
+.body-inicio{
+    background-color: #4A403A;
+    font-family: sans-serif;
+    background-size: 100vw 100vh;
+    margin: 0;
+    margin-bottom: 1px;
+}
+
+body{
+    font-family: Helvetica, arial, sans-serif;
+    margin: 0em;
+    background-color: #4A403A ;
+    font-family: sans-serif;
+    background-size: 100vw 100vh;
+
+}    
+.body-gral{
+    background-color: #4A403A ;
+    font-family: sans-serif;
+    background-image: url(/img/fondo.jpg);
+    background-size: 100vw 100vh;
+}
+
+
+
+.barra-menu {
+    position: fixed;
+    top: 0;
+    right: 0;    
+    left: 0;
+    z-index: 20;
+}
+.ico-redes{
+    padding: 0.3em;
+}
+.navbar-collapse { 
+    text-align: center; 
+    
+}
+.navbar{
+    background-color: #63564e !important;
+    min-width: 100vw 100vh !important;
+      
+}
+.navbar a{
+color: rgb(245, 121, 32) !important;
+}
+
+.btn{
+    background-color: rgb(245, 121, 32);
+}
+.btn:hover{
+background-color:  #4A403A;
+color: rgb(245, 121, 32);
+}
+a:hover{
+    color: rgb(247, 181, 133) !important;
+}
+.logo{
+    
+    height: 10%;  
+}
+#logo-inicio{
+    position: absolute;
+    margin-top: 18vw;
+    padding: 1em;
+    min-block-size: 20vw;
+    margin-left: 10vh;
+    z-index: 21; 
+}
+.fondo{
+    background-position:absolute;
+    z-index:1; 
+    width:100%; 
+    height:100%;
+}
+    
+.hero{
+    margin-top: 10%;
+    margin-right: 5%;
+    background: #4A403A;
+    min-height: 100vh;
+    max-width: 850px;
+    color: #fff;
+    position: relative;
+    box-sizing: content-box;
+}
+
+.navegacion{
+    display: flex;
+    align-items: center;
+    padding: 20px 8%;
+
+}
+
+.navegacion .logo{
+    width: 200px;
+    cursor: pointer;
+}
+
+.navegacion ul{
+    flex: 1;
+    text-align: left;
+    
+}
+
+.navegacion ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+}
+
+.navegacion ul li a{
+    text-decoration: none;
+    color: #FFC069;
+}
+
+.boton{
+    background: #efefef ;
+    height: 30px;
+    width: 60px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+.boton span{
+    display: block;
+    background: #999;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    margin-left: 2px;
+    transition: background 0.5s, margin-left 0.5s;
+}
+
+.lamp-container{
+    position: absolute;
+    top: -20px;
+    left: 22%;
+    width: 200px;
+}
+
+.lamp{
+    width: 100%;
+}
+
+.light{
+    position: absolute;
+    top: 97%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 550px;
+    margin-left: -10px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+
+.text-container{
+    
+    position: relative;
+    width: 80%;
+    color: white;
+    padding-left: 2em;
+    margin-top: 8em;
+    margin-right: 2em;
+    
+    
+   
+}
+
+.text-container h1{
+    font-size: 80px;
+    font-weight: 400;
+}
+
+.text-container a{
+    text-decoration: none;
+    background: #00986F;
+    padding: 14px 40px;
+    display: inline-block;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 30px;
+    border-radius: 30px;
+}
+
+.control{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 150px;
+}
+
+.control .line{
+    width: 250px;
+    height: 4px;
+    background: #FFF;
+    margin: 0 20px;
+    border-radius: 2px;
+}
+
+.control .line span{
+    width: 50%;
+    height: 8px;
+    margin-top: -2px;
+    border-radius: 4px;
+    background: #FFC069;
+    display: block;
+}
+
+.active{
+    background: green;
+}
+.active span{
+    background: #FFF;
+    margin-left: 31px;
+}
+
+.on{
+    opacity: 1;
+}
+.login-box{
+    width: 320px;
+    height: 380px;
+    background: #4A403A;
+    color: #FFF;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 50px 30px;
+}
+.login-box .avatar{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+
+.login-box h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.login-box label{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+}
+.login-box input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"]{
+    border: none;
+    border-bottom: 1px solid #FFF;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #FFF;
+    font-size: 16px;
+}
+.login-box input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #d16217;
+    color: #FFF;
+    font-size: 18px;
+    border-radius: 20px;
+}
+.login-box a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgray;
+}
+.login-box a:hover{
+    color: #fff;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+ 
+
+.texto{
+    width: 200px;
+    margin: auto;
+    display: block;
+    top: 50px;
+    border-radius: 50px;
+}
+  
+.form-register {
+    align-items: center;
+    width: 400px;
+    background: #4A403A;
+    padding: 30px;
+    margin: auto;
+    margin-top: 20%;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px rgb(85, 42, 42);
+}
+
+  
+.form-register h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+   
+  
+.controls {
+    width: 100%;
+    background: #4A403A;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid rgb(245, 121, 32);
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+}
+  
+.form-register p {
+    height: 40px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 40px;
+  }
+
+#register{
+    margin-top: 8%;
+}
+.checkbox-input{
+    width: 20px;
+    position: relative;
+    transition: all 5.0s ease;
+    padding: 6px 8px;
+    border-radius: 6px;
+    justify-content: center;
+    background: #4A403A;
+}
+  
+.form-register a {
+    color: white;
+    text-decoration: none;
+}
+  
+.form-register a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.form-register .botons{
+    background:#d16217;
+    color: white;
+    display: inline-block;
+    padding: 10px 140px;
+    border-radius: 2px;
+    min-width: 200px;
+    text-decoration: none;
+    box-shadow: 0 0 0 0 #4A403A;
+    animation: pulse 1.5s infinite;
+}
+
+footer{
+    text-align: center ;
+    padding: 2em;
+    align-self: flex-end;
+    color: white;
+    width: 100%;
+}
+.cover {
+    height: 500px;
+    background-image: url(https://i0.wp.com/www.laarena.com.ar/__uP_Load_/2021/05/biblioteca3cc965c6.jpg?resize=696%2C464);
+    color: whitesmoke;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(.99);
+        box-shadow: 0 0 0 0 rgba(256, 256, 256, .1);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(256, 256, 256, 0);
+    }
+    100% {
+        transform: scale(.99);
+        box-shadow: 0 0 0 0 rgba(256, 256, 256, 0);
+    }
+}
+@media(max-width:480){
+    form{
+        width: 80%;
+    }
+ }
