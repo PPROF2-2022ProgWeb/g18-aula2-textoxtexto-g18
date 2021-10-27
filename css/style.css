@@ -23,8 +23,6 @@ body{
     background-size: 100vw 100vh;
 }
 
-
-
 .barra-menu {
     position: fixed;
     top: 0;
@@ -225,6 +223,7 @@ a:hover{
 .on{
     opacity: 1;
 }
+
 .login-box{
     width: 320px;
     height: 380px;
@@ -296,8 +295,12 @@ a:hover{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
- 
+}
+#contact-form{
+    width: 30em ;
+    height: 30em;
+
+}
 
 .texto{
     width: 200px;
