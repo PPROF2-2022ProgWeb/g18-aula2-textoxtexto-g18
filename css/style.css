@@ -23,8 +23,6 @@ body{
     background-size: 100vw 100vh;
 }
 
-
-
 .barra-menu {
     position: fixed;
     top: 0;
@@ -170,6 +168,30 @@ a:hover{
     margin-top: 8em;
     margin-right: 2em;
     
+    
+   
+}
+
+.letrafacha{
+    color: antiquewhite;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    flex: 50%;
+    font-size: 100px;
+    text-align: left;
+}
+
+.text-container2{
+    
+    position: relative;
+    width: 90%;
+    color: white;
+    padding-left: 5em;
+    margin-top: 8em;
+    margin-right: 2em;;
+    flex: 50%;
+    font-size: 18px;
+    text-align: center;
     
    
 }
@@ -320,6 +342,22 @@ a:hover{
     box-shadow: 7px 13px 37px rgb(85, 42, 42);
 }
 
+
+
+.form-register-contac {
+    align-items: center;
+    width: 400px;
+    background: #4A403A;
+    padding: 30px;
+    margin: auto;
+    margin-top: 20%;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    margin-right: 210px;
+    box-shadow: 7px 13px 37px rgb(85, 42, 42);
+}
+
   
 .form-register h4 {
     font-size: 22px;
@@ -339,6 +377,19 @@ a:hover{
     color: white;
 }
   
+.controls2 {
+    width: 100%;
+    background: #4A403A;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 2px solid rgb(245, 121, 32);
+    font-family: 'calibri';
+    font-size: 22px;
+    color: white;
+}
+
+
 .form-register p {
     height: 40px;
     text-align: center;
@@ -370,6 +421,18 @@ a:hover{
 }
 
 .form-register .botons{
+    background:#d16217;
+    color: white;
+    display: inline-block;
+    padding: 10px 140px;
+    border-radius: 2px;
+    min-width: 200px;
+    text-decoration: none;
+    box-shadow: 0 0 0 0 #4A403A;
+    animation: pulse 1.5s infinite;
+}
+
+.form-register-contac .botons{
     background:#d16217;
     color: white;
     display: inline-block;
