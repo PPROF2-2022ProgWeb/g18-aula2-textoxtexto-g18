@@ -44,6 +44,7 @@ body{
 }
 .navbar a{
 color: rgb(245, 121, 32) !important;
+font-family: 'Goudy Bookletter 1911', serif;
 }
 
 .btn{
@@ -167,7 +168,7 @@ a:hover{
     padding-left: 2em;
     margin-top: 8em;
     margin-right: 2em;
-    
+    font-family: 'Goudy Bookletter 1911', serif;
     
    
 }
