@@ -50,3 +50,19 @@ function ValidarDatos() {
         alert("Error: Ingrese datos nuevamente")
     }
 }
+
+
+function calculateAge() {
+    var d = document.getElementById("fecNac").value;
+       var inDate = new Date(d);
+       var anio = inDate.getFullYear();
+       var fec_actual = new Date() ; 
+    var fec_anio = fec_actual.getFullYear() ;
+       var edad   =  fec_anio -anio ;
+        if (edad >= 18) {
+          alert("Acceso permitido, cumplis la edad minima")
+        }else
+       {
+       alert("ACCESO NO VALIDO: no cumplis la edad minima")
+       }
+   }

@@ -438,12 +438,16 @@ a:hover{
     animation: pulse 1.5s infinite;
 }
 
+
+
+
 .form-register-contac .botons{
     background:#d16217;
     color: white;
     display: inline-block;
     padding: 10px 140px;
     border-radius: 2px;
+    width: 11px;
     min-width: 200px;
     text-decoration: none;
     box-shadow: 0 0 0 0 #4A403A;
