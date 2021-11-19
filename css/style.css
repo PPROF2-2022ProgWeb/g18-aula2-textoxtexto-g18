@@ -31,7 +31,7 @@ body{
     z-index: 20;
 }
 .ico-redes{
-    padding: 0.3em;
+    padding: 0.1em;
 }
 .navbar-collapse { 
     text-align: center; 
@@ -44,6 +44,7 @@ body{
 }
 .navbar a{
 color: rgb(245, 121, 32) !important;
+font-family: 'Goudy Bookletter 1911', serif;
 }
 
 .btn{
@@ -167,7 +168,7 @@ a:hover{
     padding-left: 2em;
     margin-top: 8em;
     margin-right: 2em;
-    
+    font-family: 'Goudy Bookletter 1911', serif;
     
    
 }
@@ -437,12 +438,16 @@ a:hover{
     animation: pulse 1.5s infinite;
 }
 
+
+
+
 .form-register-contac .botons{
     background:#d16217;
     color: white;
     display: inline-block;
     padding: 10px 140px;
     border-radius: 2px;
+    width: 11px;
     min-width: 200px;
     text-decoration: none;
     box-shadow: 0 0 0 0 #4A403A;
