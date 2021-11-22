@@ -51,6 +51,19 @@ function ValidarDatos() {
     }
 }
 
+function pVolver() {
+    location.replace("index.html");
+  }
+
+  function paginaRedirect(){
+    var delay = 2000;
+   
+    
+    setTimeout(function(){
+     window.location = "index.html";
+    },delay);
+    
+   }
 
 function calculateAge() {
     var d = document.getElementById("fecNac").value;
