@@ -8,6 +8,21 @@
     margin-bottom: 1px;
 }
 
+.ok {
+	text-align: center;
+	width: 100%;
+	padding: 12px;
+	background-color: #1e6;
+	color: #fff
+}
+.bad {
+	text-align: center;
+	width: 100%;
+	padding: 12px;
+	background-color: #a22;
+	color: #fff
+}
+
 body{
     font-family: Helvetica, arial, sans-serif;
     margin: 0em;
