@@ -22,50 +22,29 @@
     <div class="text-container">
 <?php
 
-$nombre = $_POST["nombres"];
-$apellido = $_POST["apellidos"];
-$direccion = $_POST["correo"];
-$user = $_POST["usuario"];
-$fechaNac = $_POST["fecNac"];
-$pais = $_POST["pais"];
-$provincia = $_POST["provincia"];
-$contras = $_POST["contraseña"];
-
-
-echo "  <p>Su Usuario es <strong>$user</strong>.</p>\n";
-echo "\n";
-echo "  <p>Su nombre es <strong>$nombre</strong>.</p>\n";
-echo "\n";
-echo "  <p>Su apellido es <strong>$apellido</strong> .</p>\n";
-echo "\n";
-echo "  <p>Su mail es <strong>$direccion</strong>.</p>\n";
-echo "\n";
-echo "  <p>Su fecha de nacimiento es <strong>$fechaNac</strong>.</p>\n";
-echo "\n";
-echo "  <p>Su pais es <strong>$pais</strong>.</p>\n";
-echo "\n";
-echo "  <p>Su provincia es <strong>$provincia</strong>.</p>\n";
-echo "\n";
+$user = $_POST["usuarioo"];
+$contraseña = $_POST["contra"];
 
 
 
-include("datosDB.php");
+include("datosDBlogin.php");
 $con = mysqli_connect($host,$usuario,$clave,$basededatos) or die ("No se ha podido conectar al servidor de Base de datos");
 if (!$con) {
     die("Conexión fallida: " . mysqli_connect_error());
 }
 
+$consulta = "SELECT * FROM registrousuarios WHERE user='$user' and password='$contraseña' ";
+$resultado = mysqli_query($con, $consulta);
 
+$filas=mysqli_num_rows($resultado);
 
-$db = mysqli_select_db($con, $basededatos) or die ( "Upps! no se ha podido conectar a la base de datos" );
-$consulta = "INSERT INTO registrousuarios ( Name, LastName, email, FecNac, Pais, Prov, user, password) VALUES ('$nombre', '$apellido', '$direccion', '$fechaNac','$pais', '$provincia', '$user', '$contras')";
-
-
-if (mysqli_query ($con, $consulta)){
-    echo "<h3>REGISTRO AGREGADO.</h3>";
+if($filas){
+    echo "<h3>Acceso Correcto.</h3>";
+    echo "  <p>Bienvenido <strong>$user</strong>.</p>\n";
     } else {
-    echo "<h3>No se agregó nuevo registro</h3>";
-    echo "Error: " . $consulta . "<br>" . mysqli_error($con);
+        ?>
+        <h1 class="nopue">Acesso incorrecto.</h1>
+        <?php
  }
  mysqli_close($con);
 

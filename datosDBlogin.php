@@ -6,6 +6,6 @@ $basededatos="login";
 
 $conn = new mysqli($host, $usuario, $clave, $basededatos);
     if($conn->connect_error){
-        die("Database Error : " . $conn->connect_error);
+        die("Database Error : " . $conn->connect_error);    
     }
 ?>
