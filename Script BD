@@ -1,0 +1,149 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema TXT
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema TXT
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `TXT` DEFAULT CHARACTER SET utf8 ;
+USE `TXT` ;
+
+-- -----------------------------------------------------
+-- Table `TXT`.`Registro`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `TXT`.`Registro` (
+  `idRegistro` INT NOT NULL AUTO_INCREMENT,
+  `Nombre` VARCHAR(45) NULL,
+  `Apellido` VARCHAR(45) NULL,
+  `Correo` VARCHAR(45) NULL,
+  `FechaNacimiento` DATETIME NULL,
+  `Pais` VARCHAR(45) NULL,
+  `Provincia` VARCHAR(45) NULL,
+  `Contraseña` VARCHAR(45) NULL,
+  `Usuario` VARCHAR(45) NULL,
+  PRIMARY KEY (`idRegistro`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `TXT`.`Libros`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `TXT`.`Libros` (
+  `idLibros` INT NOT NULL,
+  `Nombre` VARCHAR(45) NULL,
+  `Autor` VARCHAR(45) NULL,
+  `Edicion` VARCHAR(45) NULL,
+  `Genero` VARCHAR(45) NULL,
+  PRIMARY KEY (`idLibros`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `TXT`.`Login`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `TXT`.`Login` (
+  `idLogin` INT NOT NULL AUTO_INCREMENT,
+  `usuario` VARCHAR(45) NULL,
+  `contraseña` VARCHAR(45) NULL,
+  `TipoUsuario` VARCHAR(45) NOT NULL,
+  `Registro_idRegistro` INT NOT NULL,
+  PRIMARY KEY (`idLogin`, `Registro_idRegistro`),
+  INDEX `fk_Login_Registro1_idx` (`Registro_idRegistro` ASC) VISIBLE,
+  CONSTRAINT `fk_Login_Registro1`
+    FOREIGN KEY (`Registro_idRegistro`)
+    REFERENCES `TXT`.`Registro` (`idRegistro`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `TXT`.`DescargasUsuario`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `TXT`.`DescargasUsuario` (
+  `idDescargasUsuario` INT NOT NULL,
+  `Usuario` VARCHAR(45) NULL,
+  `Libros_Nombre` VARCHAR(45) NULL,
+  `Login_idLogin` INT NOT NULL,
+  PRIMARY KEY (`idDescargasUsuario`, `Login_idLogin`),
+  INDEX `fk_DescargasUsuario_Login1_idx` (`Login_idLogin` ASC) VISIBLE,
+  CONSTRAINT `fk_DescargasUsuario_Login1`
+    FOREIGN KEY (`Login_idLogin`)
+    REFERENCES `TXT`.`Login` (`idLogin`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `TXT`.`CargasUsuario`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `TXT`.`CargasUsuario` (
+  `idCargasUsuario` INT NOT NULL,
+  `Usuario` VARCHAR(45) NULL,
+  `Libros_Nombre` VARCHAR(45) NULL,
+  `DescargasUsuario_idDescargasUsuario` INT NOT NULL,
+  `DescargasUsuario_Login_idLogin` INT NOT NULL,
+  PRIMARY KEY (`idCargasUsuario`),
+  INDEX `fk_CargasUsuario_DescargasUsuario1_idx` (`DescargasUsuario_idDescargasUsuario` ASC, `DescargasUsuario_Login_idLogin` ASC) VISIBLE,
+  CONSTRAINT `fk_CargasUsuario_DescargasUsuario1`
+    FOREIGN KEY (`DescargasUsuario_idDescargasUsuario` , `DescargasUsuario_Login_idLogin`)
+    REFERENCES `TXT`.`DescargasUsuario` (`idDescargasUsuario` , `Login_idLogin`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `TXT`.`Libros_has_DescargasUsuario`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `TXT`.`Libros_has_DescargasUsuario` (
+  `Libros_idLibros` INT NOT NULL,
+  `DescargasUsuario_idDescargasUsuario` INT NOT NULL,
+  PRIMARY KEY (`Libros_idLibros`, `DescargasUsuario_idDescargasUsuario`),
+  INDEX `fk_Libros_has_DescargasUsuario_DescargasUsuario1_idx` (`DescargasUsuario_idDescargasUsuario` ASC) VISIBLE,
+  INDEX `fk_Libros_has_DescargasUsuario_Libros1_idx` (`Libros_idLibros` ASC) VISIBLE,
+  CONSTRAINT `fk_Libros_has_DescargasUsuario_Libros1`
+    FOREIGN KEY (`Libros_idLibros`)
+    REFERENCES `TXT`.`Libros` (`idLibros`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Libros_has_DescargasUsuario_DescargasUsuario1`
+    FOREIGN KEY (`DescargasUsuario_idDescargasUsuario`)
+    REFERENCES `TXT`.`DescargasUsuario` (`idDescargasUsuario`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `TXT`.`CargasUsuario_has_Libros`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `TXT`.`CargasUsuario_has_Libros` (
+  `CargasUsuario_idCargasUsuario` INT NOT NULL,
+  `Libros_idLibros` INT NOT NULL,
+  PRIMARY KEY (`CargasUsuario_idCargasUsuario`, `Libros_idLibros`),
+  INDEX `fk_CargasUsuario_has_Libros_Libros1_idx` (`Libros_idLibros` ASC) VISIBLE,
+  INDEX `fk_CargasUsuario_has_Libros_CargasUsuario1_idx` (`CargasUsuario_idCargasUsuario` ASC) VISIBLE,
+  CONSTRAINT `fk_CargasUsuario_has_Libros_CargasUsuario1`
+    FOREIGN KEY (`CargasUsuario_idCargasUsuario`)
+    REFERENCES `TXT`.`CargasUsuario` (`idCargasUsuario`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_CargasUsuario_has_Libros_Libros1`
+    FOREIGN KEY (`Libros_idLibros`)
+    REFERENCES `TXT`.`Libros` (`idLibros`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
