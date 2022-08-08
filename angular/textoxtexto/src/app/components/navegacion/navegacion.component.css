@@ -1,0 +1,21 @@
+.navbar{
+  background-color: rgba(99, 86, 78, 1);
+}
+
+.navbar a{
+  color: orange;
+}
+.navbar button{
+  background-color: orange;
+  color: black;
+  border:none;
+}
+
+.collapse a{
+  flex-grow: 1;
+}
+
+img{
+  width: 2.5%;
+  margin-right: 20px;
+}
