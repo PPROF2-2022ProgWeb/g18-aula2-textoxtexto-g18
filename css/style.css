@@ -74,8 +74,9 @@ a:hover{
 }
 .logo{
     
-    height: 10%;  
+    height: 1em;  
 }
+
 #logo-inicio{
     position: absolute;
     margin-top: 18vw;
